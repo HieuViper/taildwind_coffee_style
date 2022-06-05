@@ -1,0 +1,50 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ct = custom */
+.top-menu-expanded{
+    @apply absolute top-10 z-50 w-full bg-white text-center animate-slideDown
+}
+
+.ct-top-nav-item{
+    @apply cursor-pointer py-1 hover:text-gray-800  relative after:lg:absolute after:lg:bg-coffee-200 after:lg:left-0 after:lg:bottom-0 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300
+}
+
+.ct-top-nav-item-active{
+    @apply text-gray-800
+}
+
+.ct-icon{
+    @apply w-5 h-5 inline-block
+}
+
+.ct-badge-circle{
+    @apply text-xs text-center rounded-full px-1
+}
+
+.ct-subheadline{
+    @apply flex justify-center items-center mb-24
+}
+
+.ct-subheadline-deco-line{
+    @apply w-8 h-px bg-gray-200
+}
+
+.ct-subheadline-label{
+    @apply text-center uppercase tracking-widest text-gray-500 font-medium text-[12px] mx-4
+}
+
+.ct-button{
+    @apply uppercase tracking-[.25em] cursor-pointer hover:opacity-90 
+}
+
+.ct-footer-list-item{
+    @apply text-sm text-gray-500 leading-6 mb-2 hover:text-coffee-400 duration-200
+}
+
+.ct-footer-title {
+    @apply text-sm uppercase text-gray-500 font-medium tracking-widest mb-6 mt-3 lg:mt-0
+}
