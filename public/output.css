@@ -526,16 +526,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.75rem;
 }
 
-.mb-52{
-  margin-bottom: 13rem;
-}
-
-.mb-10{
-  margin-bottom: 2.5rem;
+.mt-24{
+  margin-top: 6rem;
 }
 
 .mb-24{
   margin-bottom: 6rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-32{
@@ -550,20 +554,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 7rem;
 }
 
-.mb-8{
-  margin-bottom: 2rem;
-}
-
 .mb-5{
   margin-bottom: 1.25rem;
 }
 
 .ml-0{
   margin-left: 0px;
-}
-
-.mt-24{
-  margin-top: 6rem;
 }
 
 .mb-3{
@@ -642,14 +638,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 54px;
 }
 
-.min-h-\[350px\]{
-  min-height: 350px;
-}
-
-.min-h-\[340px\]{
-  min-height: 340px;
-}
-
 .min-h-\[330px\]{
   min-height: 330px;
 }
@@ -664,16 +652,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: max-content;
 }
 
+.w-\[70\%\]{
+  width: 70%;
+}
+
 .w-\[95\%\]{
   width: 95%;
 }
 
 .w-\[100vw\]{
   width: 100vw;
-}
-
-.w-\[70\%\]{
-  width: 70%;
 }
 
 .w-\[90\%\]{
@@ -761,12 +749,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
-.gap-14{
-  gap: 3.5rem;
-}
-
 .gap-4{
   gap: 1rem;
+}
+
+.gap-14{
+  gap: 3.5rem;
 }
 
 .gap-5{
@@ -923,11 +911,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -966,16 +949,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -984,6 +957,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-3{
@@ -1365,31 +1343,52 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.placeholder\:my-auto::-moz-placeholder{
-  margin-top: auto;
-  margin-bottom: auto;
+#root {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* ... */
+  perspective: 2px;
 }
 
-.placeholder\:my-auto:-ms-input-placeholder{
-  margin-top: auto;
-  margin-bottom: auto;
+.ct-parallax,
+.ct-no-parallax {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.placeholder\:my-auto::placeholder{
-  margin-top: auto;
-  margin-bottom: auto;
+.ct-parallax {
+  height: 40vh;
 }
 
-.placeholder\:text-center::-moz-placeholder{
-  text-align: center;
+.ct-no-parallax {
+  height: auto;
+  z-index: 999;
+  background: white;
 }
 
-.placeholder\:text-center:-ms-input-placeholder{
-  text-align: center;
+.ct-parallax-image {
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.placeholder\:text-center::placeholder{
-  text-align: center;
+@media (min-width: 768px){
+  .ct-parallax {
+    height: 70vh;
+    transform-style: preserve-3d;
+  }
+
+  .ct-parallax-image {
+    transform: translateZ(-1px) scale(1.5);
+  }
 }
 
 .placeholder\:text-xs::-moz-placeholder{
@@ -1569,18 +1568,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px){
-  .sm\:mb-0{
-    margin-bottom: 0px;
-  }
-
-  .sm\:block{
-    display: block;
-  }
-
-  .sm\:flex{
-    display: flex;
-  }
-
   .sm\:h-\[540px\]{
     height: 540px;
   }
@@ -1591,10 +1578,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:flex-row{
-    flex-direction: row;
   }
 
   .sm\:gap-8{
@@ -1609,15 +1592,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
-  .sm\:px-12{
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .sm\:text-left{
-    text-align: left;
-  }
 }
 
 @media (min-width: 768px){
@@ -1627,14 +1601,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:ml-2{
     margin-left: 0.5rem;
-  }
-
-  .md\:block{
-    display: block;
-  }
-
-  .md\:flex{
-    display: flex;
   }
 
   .md\:h-\[130px\]{
@@ -1669,17 +1635,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: column;
   }
 
-  .md\:px-36{
-    padding-left: 9rem;
-    padding-right: 9rem;
+  .md\:pl-8{
+    padding-left: 2rem;
   }
 
   .md\:pl-16{
     padding-left: 4rem;
-  }
-
-  .md\:pl-8{
-    padding-left: 2rem;
   }
 
   .md\:text-left{
@@ -1716,10 +1677,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:mt-0{
     margin-top: 0px;
-  }
-
-  .lg\:block{
-    display: block;
   }
 
   .lg\:flex{
@@ -1766,11 +1723,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 2rem;
   }
 
-  .lg\:px-52{
-    padding-left: 13rem;
-    padding-right: 13rem;
-  }
-
   .lg\:pr-3{
     padding-right: 0.75rem;
   }
@@ -1787,10 +1739,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 1280px){
   .xl\:w-\[75\%\]{
     width: 75%;
-  }
-
-  .xl\:px-72{
-    padding-left: 18rem;
-    padding-right: 18rem;
   }
 }
