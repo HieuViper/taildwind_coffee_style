@@ -48,3 +48,51 @@
 .ct-footer-title {
     @apply text-sm uppercase text-gray-500 font-medium tracking-widest mb-6 mt-3 lg:mt-0
 }
+
+#root {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* ... */
+  perspective: 2px;
+}
+
+.ct-parallax,
+.ct-no-parallax {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ct-parallax {
+  height: 40vh;
+}
+
+.ct-no-parallax {
+  height: auto;
+  z-index: 999;
+  background: white;
+}
+
+.ct-parallax-image {
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media screen(md){
+    .ct-parallax {
+        height: 70vh;
+        transform-style: preserve-3d;
+    }
+    .ct-parallax-image {
+        transform: translateZ(-1px) scale(1.5);
+    }
+
+}
