@@ -1357,11 +1357,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .ct-parallax {
   height: 40vh;
+  position: relative;
+  z-index: -1;
 }
 
 .ct-no-parallax {
