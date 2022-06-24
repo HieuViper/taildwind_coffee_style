@@ -1,4 +1,4 @@
-brTailwindCSS Coffee Style by DevHieu
+TailwindCSS Coffee Style by DevHieu
 
 Requirements<br />
 nodejs >= v14.16.0<br />
@@ -14,4 +14,4 @@ Clone project and run test.
 <br />
 > yarn start:dev
 
-Thanks for watching!
+Thanks for coming!
