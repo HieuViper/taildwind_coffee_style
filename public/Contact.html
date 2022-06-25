@@ -18,7 +18,7 @@
       <header class="p-6 lg:mx-auto w-full max-w-screen-2xl">
         <nav class="flex flex-row justify-between items-center relative">
           <div class="logo px-3 basis-4/6 lg:basis-1/6 lg:text-center text-xl font-semibold cursor-pointer ">
-            CoffeeStyle.
+            <a href="/" class=""> CoffeeStyle.</a>
           </div>
 
           <ul id="top-menu"
@@ -240,6 +240,9 @@
       
     </div> <!-- End content-wrapper #2 -->
   </div> <!-- End root -->
+
+  <button id="to-top-button" onclick="scrollToTop(1000)" title="Go To Top"
+        class="hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-coffee-200 hover:bg-coffee-400 transition-all ease-linear duration-200 text-white text-3xl font-bold">&uarr;</button>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>

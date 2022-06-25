@@ -18,13 +18,13 @@
             <header class="p-6 lg:mx-auto w-full max-w-screen-2xl">
                 <nav class="flex flex-row justify-between items-center relative">
                     <div class="logo px-3 basis-4/6 lg:basis-1/6 lg:text-center text-xl font-semibold cursor-pointer ">
-                        CoffeeStyle.
+                        <a href="/" class=""> CoffeeStyle.</a>
                     </div>
 
                     <ul id="top-menu"
                         class="basis-3/6 hidden lg:flex lg:flex-row lg:items-center lg:justify-end lg:gap-8 lg:pr-3 uppercase text-sm text-gray-500 font-medium">
                         <li class="ct-top-nav-item ct-top-nav-item-active">
-                            <a href="#" class="">Home</a>
+                            <a href="/" class="">Home</a>
                         </li>
                         <li class="ct-top-nav-item">
                             <a href="OurProducts.html" class=""> Our Products</a>
@@ -517,7 +517,13 @@
                 </div>
             </footer> <!-- End footer -->
         </div> <!-- End content-wrapper #2 -->
+
+        <!-- <button onclick="topFunction()"
+            class="fixed block z-30 bottom-5 right-8 border-none outline-none bg-red-600 text-white cursor-pointer p-5 rounded-md hover:bg-slate-500"
+            id="myBtn" title="Go to top">Top</button> -->
     </div> <!-- End root -->
+    <button id="to-top-button" onclick="scrollToTop(1000)" title="Go To Top"
+        class="hidden fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-coffee-200 hover:bg-coffee-400 transition-all ease-linear duration-200 text-white text-3xl font-bold">&uarr;</button>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
